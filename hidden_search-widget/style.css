@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+  --border-fill: #3791da;
+  --border-empty: #ccc;
+}
+body {
+  font-family: Quicksand, sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 40px auto;
+  background-color: #eee;
+}
+
+.search {
+  position: relative;
+  height: 50px;
+}
+
+.search.active input {
+  width: 200px;
+}
+
+.search.active button {
+  transform: translate(170px, 20%);
+}
+
+.search input {
+  background-color: #fff;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  transition: width 0.3s ease;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border: 0;
+  font-size: 24px;
+  background-color: #fff;
+  transform: translate(20%, 20%);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
