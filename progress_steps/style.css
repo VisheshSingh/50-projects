@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+  --border-fill: #3791da;
+  --border-empty: #ccc;
+}
+body {
+  font-family: Quicksand, sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 40px auto;
+  background-color: #eee;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 350px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.progress-container::before {
+  background: var(--border-empty);
+  content: '';
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  z-index: -2;
+  transform: translateY(-50%);
+}
+
+.progress {
+  background: var(--border-fill);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 0%;
+  z-index: -1;
+  transform: translateY(-50%);
+  transition: 0.4s ease-in;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--border-empty);
+  transition: 0.3s ease;
+  transition-delay: 0.3s;
+}
+
+.circle.active {
+  border: 3px solid var(--border-fill);
+}
+
+button {
+  padding: 8px 30px;
+  border-radius: 8px;
+  background-color: var(--border-fill);
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  margin: 5px;
+  transition-delay: 0.3s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: var(--border-empty);
+}
