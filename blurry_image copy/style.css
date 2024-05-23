@@ -30,14 +30,15 @@ h1 {
   margin: 20px;
   border-radius: 8px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
-  transform: translateX(-400%);
+  /* transform: translateX(-400%); */
   transition: 0.4s ease-in;
 }
 
 .box:nth-of-type(even) {
-  transform: translateX(400%);
+  /* transform: translateX(400%); */
 }
 
 .box.show {
   transform: translateX(0);
+  background-color: aqua;
 }
