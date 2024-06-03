@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+html {
+  transition: all 0.4s ease-in;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #111;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
+}
+
+body {
+  font-family: Quicksand, 'sans-serif';
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 4px;
+  padding: 8px;
+  position: absolute;
+  top: 100px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toggle:focus {
+  outline: 0;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clock {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.needle {
+  position: absolute;
+  height: 65px;
+  width: 3px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-100%);
+  background-color: var(--primary-color);
+  transform-origin: bottom center;
+}
+
+.needle.hour {
+  transform: translateY(-100%) rotate(0deg);
+}
+.needle.minute {
+  transform: translateY(-100%) rotate(0deg);
+  height: 100px;
+}
+.needle.second {
+  transform: translateY(-100%) rotate(0deg);
+  height: 100px;
+  background-color: #e74c3c;
+}
+
+.center-point {
+  width: 10px;
+  height: 10px;
+  background-color: #e74c3c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.center-point::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.time {
+  font-size: 60px;
+  margin: 16px;
+}
+
+.date {
+  font-size: 14px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.3;
+}
+
+.date span {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  height: 18px;
+  width: 18px;
+  display: inline-flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  line-height: 18px;
+}
