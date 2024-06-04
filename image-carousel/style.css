@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@300..700&display=swap');
+
+body {
+  font-family: Muli, sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 40px auto;
+  background-color: #b9b027;
+}
+
+.carousel-container {
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transform: translateX(-500px);
+  transition: all 0.5s ease-in-out;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 50%;
+  padding: 8px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
